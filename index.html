@@ -3,26 +3,63 @@
         <meta charset='utf-8'/>
         <title>Code Cash</title>
         <script>
-            const name = 'Josenildo';  // string
-            const age = 30.5;          // number
-            const active = true;       //false boolean
-            const vote = null;         //object 
-            const contain = undefined; //underfined
 
-         //    console.log('Hello word!');// comum para os 2 ambiente browaser e cli
-         //   window.alert("Hello Word!")
-          console.log(name,typeof name);
-        //   console.log(typeof name);
-          console.log(age,typeof age);
-        //   console.log(typeof age);
-          console.log(active,typeof active);
-        //   console.log(typeof active);
-          console.log(vote,typeof vote);
-        //   console.log(typeof vote);
-          console.log(contain,typeof contain);
-        //   console.log(typeof contain);
-           console.log('Meu nome é ' + name + "e tenho " + age + "anos");
-           console.log('Meu nome é '${name}"e tenho " ${age} "anos");
-            </script>
+         // const name = window.prompt('Digite seu nome:');
+
+        /*  if (name){         
+             window.alert(`Olá, ${name}! Seja bem Vindo ao Code cash.`);
+           } else if (name ===''){
+             window.alert(`Olá! Seja bem Vindo ao Code cash.`);
+           } else {
+              window.alert('Operação Cancelada!');
+           }*/
+
+         /*  const temp = window.prompt('Digite a Temperatura Ambiente');
+
+           if      (temp < 5 ){
+                             console.log('Frio intenso');
+           }else if(temp <= 15 ) {
+                            console.log('Clima frio')
+           }else if (temp < 25){
+                            console.log('Clima Agradavel')
+           }else if (temp <= 30){
+                           console.log('Clima Quente')
+           }else   {
+                       console.log('Calor intenso')
+           }*/
+
+           /* for (i = 1 ; i <= 100; i=i+1){
+             
+              if (i % 2===0) {
+                 console.log(`Numero par:=${i}`);}
+                 else{
+                    console.log(`Numero impar:=${i}`);}
+                 }
+            */
+           for (num = 1 ; num <= 100; num=num+1){
+             
+              if (num % 2===0) {
+                 if (num % 5===0) 
+                       console.log(`${num}MAR`);}
+             
+              if (num % 5===0 && num % 2===0) 
+                    console.log(`${num}MARMENINO`);}
+              
+              
+
+
+
+           /* if      (temp > 30){
+                             console.log('Calor intenso');
+           }else if(temp < 30 ) {
+                            console.log('Clima Quente')
+           }else if (temp < 25){
+                            console.log('Clima Agradavel')
+           }else if (temp <= 15 ){
+                           console.log('Clima frio')
+           }else    (temp < 5){
+                           console.log('Frio intenso')
+           }*/
+        </script>
     </head>
 </html>
