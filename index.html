@@ -36,15 +36,14 @@
                     console.log(`Numero impar:=${i}`);}
                  }
             */
-           for (num = 1 ; num <= 100; num=num+1){
+          /* for (num = 1 ; num <= 100; num=num+1){
              
               if (num % 2===0) {
                  if (num % 5===0) 
                        console.log(`${num}MAR`);}
              
               if (num % 5===0 && num % 2===0) 
-                    console.log(`${num}MARMENINO`);}
-              
+                    console.log(`${num}MARMENINO`);}  */          
               
 
 
@@ -60,6 +59,65 @@
            }else    (temp < 5){
                            console.log('Frio intenso')
            }*/
+         
+        //   function greet(name) {
+          //   const nome = name;
+       //      alert(`Hello!, ${name}!`);
+
+      //     }
+
+          // greet('Alex');
+
+
+          /* function sum(n1,n2){
+            alert(n1+n2);
+           }
+
+           sum(5,3);
+            sum(5,'3');
+             sum(11,11);
+              sum(11,true);
+               sum(11,false);
+               sum(11,null);*/
+
+        //function parse(num) {
+        //if (num % 2 === 0) {
+        //  alert('é par');
+        //} else {
+        //alert('é ímpar');
+       // }
+        //    }
+
+       // parse(0);
+
+   //    function parse(n) {
+//        if (n % 2 === 0) return alert(`${n} é par.`);
+
+ //       alert(`${n} é impar.`);
+  //    }
+
+   //   parse(5);
+
+      function greet() {
+        const name = prompt('Digite seu nome:');
+
+        if (name === '') {
+          return alert(
+            'Olá! Seja bem vindo ao Code Cash.'
+          );      
+        } else if (name === null) {
+          return alert ('Operação cancelada.');
+        } else if (!isNaN(Number(name))) {
+          alert('Digite um valor válido.');
+          return greet();
+        }
+        
+        alert(`Olá, ${name}! Seja bem vindo ao Code Cash.`);
+      }
+
+      greet();
+
+     
         </script>
     </head>
 </html>
