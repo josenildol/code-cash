@@ -97,7 +97,8 @@
   //    }
 
    //   parse(5);
-
+      let repeat = true;
+      
       function greet() {
         const name = prompt('Digite seu nome:');
 
@@ -106,7 +107,9 @@
             'Olá! Seja bem vindo ao Code Cash.'
           );      
         } else if (name === null) {
+          repeat = false;          
           return alert ('Operação cancelada.');
+          
         } else if (!isNaN(Number(name))) {
           alert('Digite um valor válido.');
           return greet();
@@ -115,9 +118,83 @@
         alert(`Olá, ${name}! Seja bem vindo ao Code Cash.`);
       }
 
-      greet();
+     greet();
 
-     
+      let balance = 0;
+    
+
+
+      const operations = {
+        check:    () => { alert(`Saldo atual: R$ ${balance}`); },
+        deposit:  () => { const deposit = Number(prompt( 'Valor do Deposito'));
+
+                          if (Number(deposit ===null)){
+                              alert('Operação cancelada.');
+                              return;
+                          }
+        
+                              if (Number(deposit) < 1 || isNaN (deposit)){ 
+                                  alert('Valor invalido');
+                                return operations.deposit();  
+                              }
+
+                              
+
+                        balance = balance + Number(deposit);
+                      window.alert(`Saldo atual: R$ ${balance}`);
+                            };
+        cashOut:  () => { const cashout = prompt( 'Valor de saque'); 
+
+                           if (Number(cashout ===null)){
+                              alert('Operação cancelada.');
+                              return;}
+                          
+                              if (Number(cashout < 1 || isNaN (cashout))){ 
+                                  alert('Valor invalido');
+                                return operations.cashout();  
+                              }
+                                balance = balance - Number(cashout);},
+        exit:     () => {   alert('Foi um Prazer Atende-lo. Ate Logo'); repeat = false;},
+        invalid:  () => {   alert('Operação invalida');}
+      }
+    
+
+      while (repeat) {
+
+      const operation = Number(prompt(`
+       Escolha uma Operação: 
+       1. Consultar
+       2. Depositar
+       3. Sacar
+       4. Sair
+      `));
+
+     /// if (operation === 1) {
+   //     alert(`Saldo atual: R$ ${balance}`)
+  ///    } else if (operation === 4) { 
+    //      repeat = false}
+
+    switch (operation) {
+      case 1:        
+       operations.check();
+           break;
+
+      case 2:      
+           operations.deposit();
+          break;          
+      
+      case 3:     
+         operations.cashOut();
+          break;        
+   
+      case 4: 
+             default:
+               operations.invalid();
+         
+        }
+      };
+      
+  
         </script>
     </head>
 </html>
